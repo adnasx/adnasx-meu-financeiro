@@ -1,5 +1,5 @@
 // Guarda só o código do app para abrir sem internet. Nunca guarda dados financeiros.
-const V = 'mf-v2'
+const V = 'mf-v1'
 self.addEventListener('install', (e) => {
   self.skipWaiting()
   e.waitUntil(caches.open(V).then((c) => c.addAll(['./', './index.html', './manifest.webmanifest'])))
